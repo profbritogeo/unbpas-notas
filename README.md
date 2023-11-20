@@ -1,2 +1,642 @@
-# unbpas-notas
-Tabela de notas de corte atualizada com base nas médias entre 2017 e 2022
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas de Corte (Argumento Final)</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        h2 {
+            color: #3498db; /* Tom de azul */
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #3498db; /* Tom de azul */
+            text-align: left;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #2980b9; /* Tom de azul mais escuro para a primeira linha */
+            color: #ecf0f1; /* Cor do texto para a primeira linha */
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #ecf0f1; /* Tom de azul mais claro para linhas pares */
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #d4e6f1; /* Tom de azul mais claro para linhas ímpares */
+        }
+
+        .btn-ordenar {
+            background-color: #e74c3c; /* Cor vermelha */
+            color: #fff; /* Texto branco */
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        .botao-container {
+            float: right;
+            margin-top: 20px;
+            margin-right: 20px; /* Adiciona margem à direita para o espaçamento */
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body class="clearfix">
+
+    <h2>Notas de Corte (Argumento Final)</h2>
+
+    <div class="botao-container">
+        <button id="ordenarBtn" class="btn-ordenar">Ordenar Notas</button>
+    </div>
+
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Campus</th>
+                <th>Curso</th>
+                <th>Nota de Corte</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ceilândia</td>
+                <td>Enfermagem (Bacharelado) - DIURNO</td>
+                <td>35.009</td>
+            </tr>
+            <tr>
+                <td>Ceilândia</td>
+                <td>Farmácia (Bacharelado) - DIURNO</td>
+                <td>19.744</td>
+            </tr>
+            <tr>
+                <td>Ceilândia</td>
+                <td>Fisioterapia (Bacharelado) - DIURNO</td>
+                <td>31.891</td>
+            </tr>
+<tr>
+    <td>Ceilândia</td>
+    <td>Fonoaudiologia (Bacharelado) - DIURNO</td>
+    <td>7.948</td>
+</tr>
+<tr>
+    <td>Ceilândia</td>
+    <td>Saúde Coletiva (Bacharelado) - DIURNO</td>
+    <td>-58.440</td>
+</tr>
+<tr>
+    <td>Ceilândia</td>
+    <td>Terapia Ocupacional (Bacharelado) - DIURNO</td>
+    <td>-21.867</td>
+</tr>
+<tr>
+    <td>Ceilândia</td>
+    <td>Engenharias – Aeroespacial / Automotiva / Eletrônica / Energia / Software (Bacharelados) - DIURNO</td>
+    <td>47.638</td>
+</tr>
+<tr>
+    <td>Planaltina</td>
+    <td>Ciências Naturais (Licenciatura) - DIURNO</td>
+    <td>-76.449</td>
+</tr>
+<tr>
+    <td>Planaltina</td>
+    <td>Ciências Naturais (Licenciatura) -NOTURNO</td>
+    <td>-67.918</td>
+</tr>
+<tr>
+    <td>Planaltina</td>
+    <td>Gestão Ambiental (Bacharelado) - NOTURNO</td>
+    <td>-62.478</td>
+</tr>
+<tr>
+    <td>Planaltina</td>
+    <td>Gestão do Agronegócio (Bacharelado) - DIURNO</td>
+    <td>-85.494</td>
+</tr>
+<tr>
+    <td>Planaltina</td>
+    <td>Licenciatura em Artes Cênicas - DIURNO</td>
+    <td>-52.165</td>
+</tr>
+
+<tr>
+    <td>Plano Piloto</td>
+    <td>Administração (Bacharelado) - DIURNO</td>
+    <td>51.746</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Administração (Bacharelado) - NOTURNO</td>
+    <td>16.156</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Agronomia (Bacharelado) - DIURNO</td>
+    <td>2.102</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Arquitetura e Urbanismo (Bacharelado) - DIURNO</td>
+    <td>56.378</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Arquitetura e Urbanismo (Bacharelado) - NOTURNO</td>
+    <td>39.502</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Arquivologia (Bacharelado) - NOTURNO</td>
+    <td>-54.873</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Artes Cênicas (Bacharelado/Licenciatura) - DIURNO</td>
+    <td>-11.891</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Artes Visuais (Bacharelado/Licenciatura) - DIURNO</td>
+    <td>-17.385</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Artes Visuais (Bacharelado) - DIURNO</td>
+    <td>29.410</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Artes Visuais (Licenciatura) - DIURNO</td>
+    <td>-90.010</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Bacharelado em Química - DIURNO</td>
+    <td>33.452</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Biblioteconomia (Bacharelado) - DIURNO</td>
+    <td>-54.355</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Biotecnologia (Bacharelado) - DIURNO</td>
+    <td>87.383</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Ciência da Computação (Bacharelado) - DIURNO</td>
+    <td>103.653</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Ciência Política (Bacharelado) - DIURNO</td>
+    <td>56.914</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Ciências Ambientais (Bacharelado) - NOTURNO</td>
+    <td>-46.103</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Ciências Biológicas (Bacharelado) - DIURNO</td>
+    <td>74.362</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Ciências Contábeis (Bacharelado) - DIURNO</td>
+    <td>22.809</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Ciências Contábeis (Bacharelado) - NOTURNO</td>
+    <td>-9.369</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Ciências Econômicas (Bacharelado) - DIURNO</td>
+    <td>94.981</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Ciências Sociais - Antropologia/Sociologia (Bacharelado/Licenciatura) - DIURNO</td>
+    <td>12.184</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Computação (Licenciatura) - NOTURNO</td>
+    <td>-27.302</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Comunicação Organizacional (Bacharelado) - NOTURNO</td>
+    <td>12.460</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Comunicação Social – Audiovisual/Publicidade e Propaganda (Bacharelados) - DIURNO</td>
+    <td>76.080</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Comunicação Social - Publicidade e Propaganda (Bacharelado) - DIURNO</td>
+    <td>62.484</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Design – Programação Visual/Projeto do Produto (Bacharelados)* - DIURNO</td>
+    <td>75.840</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Direito (Bacharelado) - DIURNO</td>
+    <td>126.105</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Direito (Bacharelado) - NOTURNO</td>
+    <td>100.613</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Educação Física (Bacharelado) - DIURNO</td>
+    <td>7.459</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Educação Física (Licenciatura) - DIURNO</td>
+    <td>-5.724</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Enfermagem (Bacharelado) - DIURNO</td>
+    <td>55.096</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Engenharia Ambiental (Bacharelado) - DIURNO</td>
+    <td>33.769</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Engenharia Civil (Bacharelado) - DIURNO</td>
+    <td>83.668</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Engenharia de Computação (Bacharelado) - DIURNO</td>
+    <td>112.863</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Engenharia de Produção (Bacharelado) - NOTURNO</td>
+    <td>65.391</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Engenharia de Redes de Comunicação (Bacharelado) - DIURNO</td>
+    <td>20.974</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Engenharia Elétrica (Bacharelado) - DIURNO</td>
+    <td>104.009</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Engenharia Florestal (Bacharelado) - DIURNO</td>
+    <td>-26.333</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Engenharia Mecânica (Bacharelado) - DIURNO</td>
+    <td>97.757</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Engenharia Mecatrônica – Controle e Automação (Bacharelado) - DIURNO</td>
+    <td>114.443</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Engenharia Química (Bacharelado) - DIURNO</td>
+    <td>73.263</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Estatística (Bacharelado) - DIURNO</td>
+    <td>37.533</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Farmácia (Bacharelado) - DIURNO</td>
+    <td>55.630</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Farmácia (Bacharelado) - NOTURNO</td>
+    <td>12.854</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Filosofia (Bacharelado/Licenciatura) - DIURNO</td>
+    <td>-22.227</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Filosofia (Licenciatura) - NOTURNO</td>
+    <td>-53.435</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Física (Bacharelado) - DIURNO</td>
+    <td>48.850</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Geofísica (Bacharelado) - DIURNO</td>
+    <td>-32.718</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Geografia (Bacharelado/Licenciatura) - DIURNO</td>
+    <td>1.669</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Geologia (Bacharelado) - DIURNO</td>
+    <td>-22.098</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Gestão de Agronegócio (Bacharelado) - NOTURNO</td>
+    <td>-62.318</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Gestão de Políticas Públicas (Bacharelado) - NOTURNO</td>
+    <td>-17.661</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>História (Bacharelado/Licenciatura) - DIURNO</td>
+    <td>50.840</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>História (Licenciatura) - NOTURNO</td>
+    <td>-15.264</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Jornalismo (Bacharelado) - DIURNO</td>
+    <td>88.088</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Letras – Português do Brasil como Segunda Língua (Licenciatura) - DIURNO</td>
+    <td>-26.101</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Letras – Tradução – Francês (Bacharelado) - DIURNO</td>
+    <td>-25.562</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Letras – Tradução – Inglês (Bacharelado) - DIURNO</td>
+    <td>2.584</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Letras – Tradução Espanhol (Bacharelado) - NOTURNO</td>
+    <td>-61.595</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Licenciatura em Artes Cênicas - NOTURNO</td>
+    <td>2.541</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Licenciatura em Ciências Biológicas - NOTURNO</td>
+    <td>-5.339</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Licenciatura em Física - NOTURNO</td>
+    <td>-48.045</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Licenciatura em Matemática - NOTURNO</td>
+    <td>-23.524</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Licenciatura em Química - NOTURNO</td>
+    <td>-2.408</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Língua e Literatura Japonesa (Licenciatura) - NOTURNO</td>
+    <td>-50.907</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Língua Espanhola e Literatura Espanhola e Hispano-Americana (Licenciatura) - NOTURNO</td>
+    <td>-68.885</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Língua Estrangeira Aplicada – Multilinguismo e Sociedade da Informação (Bacharelado) - DIURNO</td>
+    <td>-17.495</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Língua Francesa e Respectiva Literatura (Bacharelado/Licenciatura) - DIURNO</td>
+    <td>-32.138</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Língua Inglesa e Respectiva Literatura (Bacharelado/Licenciatura) - DIURNO</td>
+    <td>30.981</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Língua Portuguesa e Respectiva Literatura (Bacharelado/Licenciatura) - DIURNO</td>
+    <td>26.255</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Língua Portuguesa e Respectiva Literatura (Licenciatura) - NOTURNO</td>
+    <td>-38.170</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Matemática (Bacharelado/Licenciatura) - DIURNO</td>
+    <td>34.130</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Medicina (Bacharelado) - DIURNO</td>
+    <td>175.336</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Medicina Veterinária (Bacharelado) - DIURNO</td>
+    <td>71.356</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Museologia (Bacharelado) - DIURNO</td>
+    <td>-61.342</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Música (Bacharelado) - DIURNO</td>
+    <td>17.369</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Música (Licenciatura) - DIURNO</td>
+    <td>-48.130</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Nutrição (Bacharelado) - DIURNO</td>
+    <td>66.820</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Odontologia (Bacharelado) - DIURNO</td>
+    <td>92.794</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Pedagogia (Licenciatura) - DIURNO</td>
+    <td>-5.476</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Pedagogia (Licenciatura) - NOTURNO</td>
+    <td>-41.778</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Psicologia (Bacharelado / Licenciatura / Psicólogo) - DIURNO</td>
+    <td>101.721</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Química (Bacharelado) - DIURNO</td>
+    <td>40.202</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Química Tecnológica (Bacharelado) - DIURNO</td>
+    <td>-16.226</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Relações Internacionais (Bacharelado) - DIURNO</td>
+    <td>96.920</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Saúde Coletiva (Bacharelado) - NOTURNO</td>
+    <td>-56.973</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Serviço Social (Bacharelado) - DIURNO</td>
+    <td>6.599</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Serviço Social (Bacharelado) - NOTURNO</td>
+    <td>-45.885</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Teoria, Crítica e História da Arte (Bacharelado) - NOTURNO</td>
+    <td>-23.124</td>
+</tr>
+<tr>
+    <td>Plano Piloto</td>
+    <td>Turismo (Bacharelado) - DIURNO</td>
+    <td>-42.390</td>
+</tr>
+
+    </tbody>
+    </table>
+ <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $("td:nth-child(3)").each(function() {
+            var valor = parseFloat($(this).text());
+            if (valor < 0) {
+                $(this).css({"color": "red", "font-weight": "bold"});
+            } else {
+                $(this).css({"font-weight": "bold"});
+            }
+        });
+    });
+</script>
+<script>
+$(document).ready(function () {
+    var ordenacaoCrescente = true;
+
+    function ordenarNotas() {
+        var notas = $("tbody td:nth-child(3)");
+        var linhas = $("tbody tr");
+
+        var dados = [];
+        notas.each(function (index) {
+            var valor = parseFloat($(this).text());
+            dados.push({ valor: valor, linha: linhas.eq(index) });
+        });
+
+        dados.sort(function (a, b) {
+            return ordenacaoCrescente ? a.valor - b.valor : b.valor - a.valor;
+        });
+
+        $("tbody").empty();
+        dados.forEach(function (item) {
+            $("tbody").append(item.linha);
+        });
+    }
+
+    $("#ordenarBtn").click(function () {
+        ordenacaoCrescente = !ordenacaoCrescente;
+        ordenarNotas();
+    });
+});
+
+</script>
+
+</body>
+</html>2
